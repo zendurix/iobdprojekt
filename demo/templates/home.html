@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1> hello {{name}}</h1>
+
+<form action="add">
+  GET type calc, you can see values you enter as an adress <br><br>
+  Enter 1st number: <input type="text" name="num1"><br>
+  Enter 2nd number: <input type="text" name="num2"><br>
+  <input type="submit">
+</form>
+<br><br>
+<form action="add2" method='post'>
+  {% csrf_token %}
+  POST type calc, you can see values you enter as an adress <br><br>
+  <!-- WE ARE NOT SENDING VALUES -->
+  Enter 1st number: <input type="text" name="num1"><br>
+  Enter 2nd number: <input type="text" name="num2"><br>
+  <input type="submit">
+</form>
+
+{% endblock %}

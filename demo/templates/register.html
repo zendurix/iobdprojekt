@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>rejestracja</title>
+  </head>
+  <body>
+    <form action ="register" method="POST">
+      {% csrf_token %}
+
+      <h3>narazie prosty i nieładny interfejs logowania:</h3><br>
+      
+      <input type="text" name="first_name" placeholder="imie"><br>
+      <input type="text" name="last_name" placeholder="nazwisko"><br>
+      <input type="text" name="username" placeholder="nick"><br>
+      <input type="email" name="email" placeholder="email"><br>
+      <input type="password" name="password1" placeholder="haslo"><br>
+      <input type="password" name="password2" placeholder="potwierdz haslo"><br>
+      <input type="Submit">
+    </form>
+
+    <div>
+      {%for message in messages%}
+      <h4> {{message}} </h4>
+      {% endfor %}
+    </div>
+  </body>
+</html>
