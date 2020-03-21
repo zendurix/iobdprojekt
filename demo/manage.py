@@ -15,7 +15,10 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+    
+    i = 3   # USUN TO
 
+# siema pl
 
 if __name__ == '__main__':
     main()
